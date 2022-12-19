@@ -36,12 +36,9 @@ tooltips.init();
 
 // #endregion
 
-// #region Iniciliazação de Funcoes
 initAnimacaoScroll();
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
 initFetchAnimais();
 initFetchBitcoin();
-
-// #endregion
