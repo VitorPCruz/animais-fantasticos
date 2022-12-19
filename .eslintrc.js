@@ -13,6 +13,6 @@ module.exports = {
   rules: {
     'no-param-reassign': 0,
     'import/extensions': 0,
-    'no-console': 0.0,
+    'no-console': 0,
   },
 };
