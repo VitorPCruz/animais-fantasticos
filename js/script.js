@@ -2,7 +2,7 @@
 import ScrollSuave from './modules/scroll-suave.js';
 import initAnimacaoScroll from './modules/scroll-animacao.js';
 import Accordion from './modules/accordion.js';
-import initModal from './modules/modal.js';
+import Modal from './modules/modal.js';
 import initTooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
@@ -21,11 +21,15 @@ const accordion = new Accordion(list);
 const tabMenu = '[data-tab="menu"] li';
 const tabContent = '[data-tab="content"] section';
 const tabNav = new TabNav(tabMenu, tabContent);
+
+const botaoAbrir = '[data-modal="abrir"]';
+const botaoFechar = '[data-modal="fechar"]';
+const containerModal = '[data-modal="container"]';
+const modal = new Modal(botaoAbrir, botaoFechar, containerModal);
 // #endregion
 
 // #region Iniciliazação de Funcoes
 initAnimacaoScroll();
-initModal();
 initTooltip();
 initDropdownMenu();
 initMenuMobile();
@@ -36,4 +40,5 @@ initFetchBitcoin();
 scrollSuave.init();
 accordion.init();
 tabNav.init();
+modal.init();
 // #endregion
