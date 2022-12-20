@@ -5,11 +5,12 @@ import Accordion from './modules/accordion.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
 import MenuMobile from './modules/menu-mobile.js';
-import initFuncionamento from './modules/funcionamento.js';
-import fetchAnimais from './modules/fetch-animais.js';
-import fetchBitcoin from './modules/fetch-bitcoin.js';
 import TabNav from './modules/tabnav.js';
 import DropdownMenu from './modules/dropdown-menu.js';
+import Funcionamento from './modules/funcionamento.js';
+
+import fetchBitcoin from './modules/fetch-bitcoin.js';
+import fetchAnimais from './modules/fetch-animais.js';
 // #endregion
 
 // #region Criacao de classes e variaveis
@@ -43,9 +44,10 @@ dropdownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
+const FUNCIONAMENTO = new Funcionamento('[data-semana]');
+FUNCIONAMENTO.init();
+
 fetchAnimais('../animaisapi.json', '.numeros-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 
 // #endregion
-
-initFuncionamento();
